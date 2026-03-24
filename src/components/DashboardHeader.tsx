@@ -42,4 +42,5 @@ export function DashboardHeader() {
         </Button>
       </div>
     </header>
+  );
 }
