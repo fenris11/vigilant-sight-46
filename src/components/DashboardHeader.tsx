@@ -4,6 +4,8 @@ import { useAuth } from "@/hooks/useAuth";
 import { Button } from "@/components/ui/button";
 
 export function DashboardHeader() {
+  const { signOut, user } = useAuth();
+
   return (
     <header className="flex items-center justify-between border-b border-border bg-card px-4 py-3 md:px-6">
       <div className="flex items-center gap-2 md:hidden w-10" />
