@@ -1,5 +1,7 @@
-import { Activity, AlertTriangle, ShieldAlert } from "lucide-react";
+import { Activity, AlertTriangle, ShieldAlert, LogOut } from "lucide-react";
 import { overviewMetrics } from "@/data/mockData";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
 
 export function DashboardHeader() {
   return (
