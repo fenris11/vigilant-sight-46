@@ -1,7 +1,11 @@
-import { Activity, AlertTriangle, ShieldAlert } from "lucide-react";
+import { Activity, AlertTriangle, ShieldAlert, LogOut } from "lucide-react";
 import { overviewMetrics } from "@/data/mockData";
+import { useAuth } from "@/hooks/useAuth";
+import { Button } from "@/components/ui/button";
 
 export function DashboardHeader() {
+  const { signOut, user } = useAuth();
+
   return (
     <header className="flex items-center justify-between border-b border-border bg-card px-4 py-3 md:px-6">
       <div className="flex items-center gap-2 md:hidden w-10" />
@@ -32,6 +36,10 @@ export function DashboardHeader() {
           <span className="font-mono font-semibold">{overviewMetrics.totalEvents.toLocaleString()}</span>
           <span className="hidden sm:inline text-muted-foreground">Events</span>
         </div>
+        <Button variant="ghost" size="sm" onClick={signOut} className="text-muted-foreground hover:text-destructive ml-2">
+          <LogOut className="h-4 w-4" />
+          <span className="hidden sm:inline ml-1">Logout</span>
+        </Button>
       </div>
     </header>
   );
