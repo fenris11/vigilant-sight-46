@@ -36,7 +36,10 @@ export function DashboardHeader() {
           <span className="font-mono font-semibold">{overviewMetrics.totalEvents.toLocaleString()}</span>
           <span className="hidden sm:inline text-muted-foreground">Events</span>
         </div>
+        <Button variant="ghost" size="sm" onClick={signOut} className="text-muted-foreground hover:text-destructive ml-2">
+          <LogOut className="h-4 w-4" />
+          <span className="hidden sm:inline ml-1">Logout</span>
+        </Button>
       </div>
     </header>
-  );
 }
